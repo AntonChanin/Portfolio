@@ -1,3 +1,90 @@
+.carusel {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.items-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.item {
+	display: none;
+	position: relative;
+	animation: 0.5s ease-in-out;
+	margin: 0 auto;
+}
+.active,
+.next {
+	display: block;
+}
+.next {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.control {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 15%;
+	cursor: pointer;
+	.left {
+		left: 80%;
+		right: auto;
+	}
+}
+/*.control .left {
+	left: 0;
+	right: auto;
+}*/
+.control .right {
+	right: 0;
+	left: auto;
+}
+.arrow {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 84px;
+}
+.arrow.right {
+	right: -500%;
+}
+.to-left {
+	animation-name: left;
+}
+.to-right {
+	animation-name: right;
+	animation-direction: reverse;
+}
+.from-right {
+	animation-name: right;
+}
+.from-left {
+	animation-name: left;
+	animation-direction: reverse;
+}
+@keyframes left {
+	from {
+		left: 0;
+	}
+	to {
+		left: -100%;
+	}
+}
+@keyframes right {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0;
+	}
+}
 .account {
 display: flex; 
 justify-content: center;
@@ -84,12 +171,4 @@ justify-content: center;
 		display: flex;
 		}
 	}		
-}
-.projects {
-	width: 100px;
-	height: 100px;
-	background-color: #f0f0f0;
-	margin-right: 30px;
-	display: flex; 
-	justify-content: center;
 }
