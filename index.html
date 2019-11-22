@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+     <link rel="stylesheet" type="text/css" href="./src/style.css">
+ </head>
+ <body>
+     <main>
+         <section class="account">
+             <div class="account__avatar"></div>
+             <div class="account__div-text-info">
+                 <h4 class="account__nick-name">Anton Chanin</h4>
+                 <div>Github:<a href="https://github.com/AntonChanin" class="account__div-text-info-a">https://github.com/AntonChanin</a></div>
+                 <div>Social network:<a  href="https://vk.com/im?peers=c6_221981782" class="account__div-text-info-a">https://vk.com/im?peers=c6_221981782</a></div>
+             </div>
+         </section>
+         <section class="education">
+            <div class="education__item">
+                <input id="one" class="education__item-input" type="checkbox" />
+                <label for="one">V</label><h2 class="education__title">education</h2>  
+                <div class="description">
+                    <ul class="education__enumeric">
+                        <li class="education__enumeric-el">School 2006-2015</li>
+                        <li class="education__enumeric-el">SP branch VGIK 2015-2019</li>
+                        <li class="education__enumeric-el">RS School curse 2019-2020</li>
+                    </ul>
+                </div>
+            </div>
+         </section>
+         <section class="projects">
+             <button class="hidden-show-description" OnClick="showEnum()">Desc</button>
+             <div class="carusel">
+                 <div class="items-container">
+                     <div class="item active">
+                         
+                         <div class="description">
+                             <div class="project-name">
+                                 <h3>Theyalow</h3> 
+                                 <ol>
+                                     <li>Use pure HTML and CSS</li> 
+                                     <li>Development with PerfectPixel</li>
+                                     <li>Development with Photo shop</li>
+                                 </ol>
+                             </div>
+                             <a href="./projects/theyalow/index.html"><img class="project-image" width="500px" heiht="500px" src="./theyalow-poster.png" alt="project"></a>
+                         </div>
+                     </div>
+                     <div class="item">
+                         <div class="description">
+                             <div class="project-name">
+                                 <h3>Repaire design project</h3> 
+                                 <ol>
+                                     <li>Support responsive web design. It means when we change width of page, the elements are shown correctly.</li>
+                                     <li>Used two @media queries.</li>
+                                     <li>Text and images positioned correctly at both desktop and mobile resolutions.</li>
+                                     <li>Development with Figma</li>
+                                 </ol>
+                             </div>
+                            <a href="./projects/repair-design-project/index.html"><img class="project-image" width="500px" heiht="500px" src="./repaire-design-project-poster.png" alt="project"></a>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="control left">
+                     <div class="arrow left">&lt;</div>
+                 </div>
+                  <div class="control right">
+                     <div class="arrow right">&gt;</div>
+                 </div>
+             </div>
+         </section>
+     </main>
+     <script src="./src/script.js"> </script>
+ </body>
+</html>

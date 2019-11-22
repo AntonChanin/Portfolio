@@ -1,0 +1,265 @@
+.carusel {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.items-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  cursor: pointer;
+}
+.control .left {
+  left: 80%;
+  right: auto;
+}
+
+.control .right {
+  right: 0;
+  left: auto;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 84px;
+}
+
+.arrow.right {
+  right: -500%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.hidden-show-description {
+  display: none;
+}
+
+ol {
+  width: 50%;
+  margin: auto;
+  text-align: start;
+}
+
+.account {
+  display: flex;
+  justify-content: center;
+}
+.account__avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin-right: 30px;
+}
+.account__div-text-info-a {
+  display: inline-flex;
+}
+
+.education {
+  background: #ffff;
+  width: 40em;
+  padding: 2em 2em 4em;
+  margin: 0 auto;
+  color: #006400;
+}
+.education__item {
+  border-top: solid 3px;
+  border-bottom: solid 1px;
+  margin-bottom: 1em;
+  color: #c8c8c8;
+}
+.education__item .description {
+  clear: both;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s ease;
+  color: #008000;
+}
+.education__item h2 {
+  diaplay: inline;
+}
+.education__item-input[type=checkbox] {
+  display: none;
+}
+.education__item-input[type=checkbox] ~ label {
+  display: block;
+  float: right;
+  width: 2em;
+  height: 2em;
+  background: #006400;
+  color: #fff;
+  text-align: center;
+  line-height: 2;
+  font-weight: bold;
+  cursor: pointer;
+}
+.education__item-input[type=checkbox] ~ label:hover {
+  background: #006400;
+}
+.education__item-input[type=checkbox]:checked ~ label {
+  background: #008000;
+}
+.education__item-input[type=checkbox]:checked ~ h2 {
+  color: #008000;
+}
+.education__item-input[type=checkbox]:checked ~ .description {
+  max-height: 200em;
+  transition: 0.5s ease;
+  background-color: #f0f0f0;
+}
+.education__btn-expansion-panels {
+  background: none;
+  border: none;
+}
+.education__head {
+  display: flex;
+  justify-content: space-between;
+}
+.education__btn-expansion-panels {
+  display: inline-flex;
+}
+.education__enumeric {
+  list-style-type: none;
+}
+.education__enumeric-el {
+  display: flex;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+.show-num-theyalow {
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .description {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 640px) {
+  .control > .arrow {
+    display: none;
+  }
+
+  .project-name {
+    display: none;
+  }
+
+  .description {
+    border: 0;
+  }
+
+  .hidden-show-description {
+    display: block;
+    background: #f0d0a0;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 50%;
+    margin: auto;
+    border: none;
+  }
+
+  .show-num {
+    display: block;
+  }
+}
+@media screen and (max-device-width: 375px) {
+  .control > .arrow {
+    display: none;
+  }
+
+  .project-name {
+    display: none;
+  }
+
+  .description {
+    border: 0;
+  }
+
+  .hidden-show-description {
+    display: block;
+    background: #f0d0a0;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 115px;
+    border: none;
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+  .show-num {
+    display: block;
+    margin-bottom: 60px;
+    font-size: 2em;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
